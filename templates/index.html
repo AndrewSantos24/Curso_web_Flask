@@ -7,6 +7,11 @@
 <body>
     <h2>Integracao do HTML com Flask</h2>
     <hr>
-    {{nome}}  tem {{idade}}
+    <ol>
+        {% for fruta in frutas %}
+            <li>{{fruta}}</li>
+        {% endfor %}
+    </ol>
+    
 </body>
 </html>
