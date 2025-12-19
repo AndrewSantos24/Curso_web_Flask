@@ -4,11 +4,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def principal():
-    nome:str = "fulano" # pode ser via banco ou requisicao
-    idade: float = 25 # aqui tambem poode ser via banco ou requisicao
-    return render_template("index.html", nome=nome, idade=idade) # fazendo assim podemos usar a variavel no html
+    fruta1:str = "Morango" # pode ser via banco ou requisicao
+    fruta2: str = "Uva" # aqui tambem poode ser via banco ou requisicao
+    lista_frutas = ["Morango","Uva","Mamao","Maca"]
+    return render_template("index.html",frutas = lista_frutas) # fazendo assim podemos usar a variavel no html
 
 @app.route('/sobre')
 def sobre():
-    return render_template("sobre.html")
+    notas = {"Fulano":5.0, "Beltrano":6.0, "Aluno:":7.0,"Sicrano":8.5}
+    return render_template("sobre.html",notas=notas)
 
